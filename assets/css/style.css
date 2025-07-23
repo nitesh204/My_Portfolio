@@ -918,8 +918,7 @@ color: grey !important;
 .filter-list { display: none; }
 
 .filter-select-box {
-  position: relative;
-  margin-bottom: 25px;
+display: none;
 }
 
 .filter-select {
@@ -2024,4 +2023,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 .project-content a:hover {
   background-color: #ffffff;
   color: #000;
+}
+@media (max-width: 500px) {
+  .project-list,
+  .portfolio,
+  .main-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
