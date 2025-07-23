@@ -357,7 +357,25 @@
 
             <li class="clients-item">
               <a href="#">
-                <img src="./assets/images/MongoDBo.gif" alt="client logo">
+                <img src="./assets/images/mongoDB.webp" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/ReactJS.webp" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/Nodejs.webp" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/aws.webp" alt="client logo">
               </a>
             </li>
 
@@ -367,11 +385,7 @@
               </a>
             </li>
 
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/html.webp" alt="client logo">
-              </a>
-            </li>
+            
             <li class="clients-item">
               <a href="#">
                 <img src="./assets/images/js.webp" alt="client logo">
@@ -483,54 +497,56 @@
         </section>
 
         <section class="skill">
+  <h3 class="h3 skills-title">My Skills</h3>
 
-          <h3 class="h3 skills-title">My skills</h3>
+  <ul class="skills-list content-card">
 
-          <ul class="skills-list content-card">
+    <li class="skills-item">
+      <div class="title-wrapper">
+        <h5 class="h5">Web Development</h5>
+        <data value="90"><span class="percent-value">90%</span></data>
+      </div>
+      <div class="skill-progress-bg">
+        <div class="skill-progress-fill"></div>
+      </div>
+    </li>
 
-            <li class="skills-item">
+    <li class="skills-item">
+      <div class="title-wrapper">
+        <h5 class="h5">Database Management</h5>
+        <data value="85"><span class="percent-value">85%</span></data>
+      </div>
+      <div class="skill-progress-bg">
+        <div class="skill-progress-fill"></div>
+      </div>
+    </li>
 
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">90%</data>
-              </div>
+    <li class="skills-item">
+      <div class="title-wrapper">
+        <h5 class="h5">AWS EC2</h5>
+        <data value="70"><span class="percent-value">70%</span></data>
+      </div>
+      <div class="skill-progress-bg">
+        <div class="skill-progress-fill"></div>
+      </div>
+    </li>
 
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
+  </ul>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.skills-item').forEach(item => {
+      const data = item.querySelector('data');
+      const bar = item.querySelector('.skill-progress-fill');
+      if(data && bar){
+        let val = parseInt(data.getAttribute('value'), 10) || 0;
+        bar.style.width = val + '%';
+      }
+    });
+  });
+</script>
 
-            </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">DataBase Management</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
 
       </article>
 
@@ -581,7 +597,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/image.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/Skillcircle.png" alt="finance" loading="lazy">
                 </figure>
 
                <h3 class="project-title">
@@ -589,6 +605,9 @@
                </h3>
 
                 <p class="project-category">Full Stack Project</p>
+               <p class="description">
+                A peer learning and mentorship platform with live sessions, credit-based booking, real-time chat, and a clean, intuitive UI–helping you teach, learn, and grow together!
+              </p>
 
               </a>
             </li>
